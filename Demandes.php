@@ -200,7 +200,6 @@ if ($_SESSION["administrator"]) {
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Nom et Prénom</th>
                                             <th>Dossier scientifique</th>
                                             <th>Dossier pedagogique</th>
@@ -217,7 +216,6 @@ if ($_SESSION["administrator"]) {
                                         foreach ($es->findDemands() as $e) {
                                         ?>
                                             <tr>
-                                                <td><?php echo $e->getId(); ?></td>
                                                 <td><?php echo $e->getNom().' '.$e->getPrenom(); ?></td>
                                                 <td><?php echo $e->getDossierScientifique(); ?></td>
                                                 <td><?php echo $e->getDossierPedagogique(); ?></td>

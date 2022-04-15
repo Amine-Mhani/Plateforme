@@ -200,7 +200,6 @@ if ($_SESSION["administrator"]) {
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Nom</th>
                                             <th>Prénom</th>
                                             <th>CIN</th>
@@ -218,7 +217,6 @@ if ($_SESSION["administrator"]) {
                                         foreach ($es->findAll() as $e) {
                                         ?>
                                             <tr>
-                                                <td><?php echo $e->getId(); ?></td>
                                                 <td><?php echo $e->getNom()?></td>
                                                 <td><?php echo $e->getPrenom(); ?></td>
                                                 <td><?php echo $e->getCin(); ?></td>

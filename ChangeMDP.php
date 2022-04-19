@@ -22,10 +22,12 @@ $es = new ProfesseurService();
 $password=$_POST['password'];
 
 $email=$_POST['email'];
-$date_naissance = $_POST['date_naissance'];
+$id = $es->findByEmail($email);
 $msg = $_POST['validity'];
 if($msg != 'non indentique'){
-    $query = "UPDATE `professeur` SET `password` = '$password' WHERE `email` = $email ";
+    $query = "UPDATE `professeur` SET `password` = md5('$password') WHERE `id` = $id ";
+    $req = $con->prepare($query);
+    $req->execute() or die('Erreur dans votre code SQL');
     echo "<script>if(confirm('Votre mot de passe a été changer avec succes !')){document.location.href='login.php'};</script>";
 }else{
     echo ('<script>alert("Erreur")</script>');

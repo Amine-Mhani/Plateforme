@@ -5,7 +5,7 @@ $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 
 //the subject
-$sub = "Your subject";
+$sub = "Verification d'inscription";
 //the message
 $msg = "Bonjour $nom $prenom, Validez votre inscription en cliquant sur le lien ci-dessous : \n\n http://localhost/plateform-2/authentification.php?email=$email&nom=$nom&prenom=$prenom";
 //recipient email here

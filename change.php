@@ -43,7 +43,7 @@ parse_str($url_components['query'], $params);
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Réinitialiser mot de passe!</h1>
                             </div>
-                            <form class="user" method="POST" action="ChangerMDP.php">
+                            <form class="user" method="POST" action="ChangeMDP.php">
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="Email Address" name="email" value="<?php echo $params['email'];?>" required readonly>
